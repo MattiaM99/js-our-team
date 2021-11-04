@@ -1,4 +1,4 @@
-
+//creato array di oggetti
 const char = [
   {
     nome: 'Angela Caroll',
@@ -32,7 +32,7 @@ const btn = document.querySelector("#addMemberButton");
 
 console.log(char);
 
-
+//funzione che permette all'utente di inserire card personalizzate
 btn.addEventListener("click", function(){
   let personalName = document.getElementById("name").value;
   let personalRole = document.getElementById("role").value;
@@ -60,6 +60,7 @@ btn.addEventListener("click", function(){
 `
 });
 
+//ciclo che inserisce tutte le card in html
 for(let index in char){
   const newChar = char[index];
   const newName = newChar.nome;
