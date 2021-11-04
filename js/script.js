@@ -40,7 +40,7 @@ btn.addEventListener("click", function(){
 
   const personalChar = {
     name: personalName,
-    job: personalRole,
+    role: personalRole,
     img: personalImg
   }
   
