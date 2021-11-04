@@ -28,18 +28,37 @@ const char = [
 ]
 
 const container = document.querySelector(".team-container");
-
+const btn = document.querySelector("#addMemberButton");
 
 console.log(char);
 
-const nuovoChar = {
-  nome: prompt('inserisci nome'),
-  ruolo: prompt('inserisci ruolo'),
-  img: prompt('inserisci url immagine') 
-};
 
-char.push(nuovoChar);
+btn.addEventListener("click", function(){
+  let personalName = document.getElementById("name").value;
+  let personalRole = document.getElementById("role").value;
+  let personalImg = document.getElementById("image").value;
 
+  const personalChar = {
+    name: personalName,
+    job: personalRole,
+    img: personalImg
+  }
+  
+  char.push(personalChar);
+  console.log(char);
+  container.innerHTML += `
+  <div class="team-card">
+    <div class="card-image">
+      <img
+        src="${personalImg}"/>
+      </div>
+      <div class="card-text">
+      <h3>${personalName}</h3>
+      <p>${personalRole}</p>
+    </div>
+  </div>
+`
+});
 
 for(let index in char){
   const newChar = char[index];
